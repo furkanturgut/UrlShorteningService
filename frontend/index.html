@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-link"></i> URL Shortener</h1>
+            <p>Make your long URLs short and easy to share!</p>
+        </header>
+
+        <main>
+            <section class="url-form">
+                <form id="shorten-form">
+                    <div class="input-group">
+                        <input type="url" id="original-url" placeholder="Enter your long URL here..." required>
+                        <input type="text" id="custom-alias" placeholder="Custom alias (optional)">
+                    </div>
+                    <button type="submit" id="shorten-button">Shorten URL</button>
+                </form>
+            </section>
+
+            <section class="result-section" id="result-section">
+                <div class="result-box">
+                    <h3>Your shortened URL</h3>
+                    <div class="short-url-container">
+                        <a id="short-url" href="" target="_blank"></a>
+                        <button id="copy-btn" title="Copy to clipboard">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <div class="original-url">
+                        <p>Original URL:</p>
+                        <p id="original-url-display" class="original-url-text"></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="url-list">
+                <h2>Recent URLs</h2>
+                <div class="list-container">
+                    <table id="urls-table">
+                        <tbody id="urls-list">
+                            <!-- URLs will be loaded here dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 URL Shortener. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <div id="message-toast" class="toast">
+        <span id="toast-message"></span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

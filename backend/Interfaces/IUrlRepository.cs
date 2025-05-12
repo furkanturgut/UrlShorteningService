@@ -8,7 +8,7 @@ namespace backend.Interfaces
 {
     public interface IUrlRepository
     {
-        Task<Url> GetById (int Id);
+        Task<Url?> GetById (int Id);
          Task<Url?> Create (Url url);
         Task<List<Url>?> GetAll (); 
         bool ShortExist(string shortUrl);

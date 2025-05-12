@@ -80,7 +80,7 @@ namespace backend.Repositories
         /// </summary>
         /// <param name="Id">The ID of the URL to find</param>
         /// <returns>URL object with the specified ID or null if not found</returns>
-        public async Task<Url> GetById(int Id)
+        public async Task<Url?> GetById(int Id)
         {
             // Use FindAsync for efficient primary key lookup
             return await _context.urls.FindAsync(Id);
